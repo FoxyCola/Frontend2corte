@@ -14,7 +14,7 @@ const ChatPrompt = () => {
     if (!selectedTopic) return;
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:5000/api/chat', {
+      const res = await axios.post('https://backend2corte.onrender.com/api/chat', {
         topic: selectedTopic,
       });
       const json = JSON.parse(res.data.response);
